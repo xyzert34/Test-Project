@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 .App1{
-  background: linear-gradient(240deg, rgba(255, 0, 0, 0.205), rgba(255,0,0,0) 40.71%),
-            linear-gradient(260deg, rgba(134, 245, 124, 0.267), rgba(0,255,0,0) 40.71%),
-            linear-gradient(170deg, rgba(255, 166, 0, 0.281), rgba(0,255,0,0) 50.71%),
-            linear-gradient(80deg, rgba(0, 162, 255, 0.432), rgba(0,0,255,0) 37.71%);
+  background: linear-gradient(240deg, rgba(245, 46, 106, 0.267), rgba(255,0,0,0) 40.71%),
+            linear-gradient(270deg, rgba(134, 245, 124, 0.267), rgba(0,255,0,0) 40.71%),
+            linear-gradient(170deg, rgba(252, 201, 106, 0.281), rgba(0,255,0,0) 50.71%),
+            linear-gradient(70deg, rgba(0, 162, 255, 0.199), rgba(0,0,255,0) 37.71%);
 }
 ::placeholder{
   color: white;
