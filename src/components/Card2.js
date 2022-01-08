@@ -3,6 +3,7 @@ import { borderRadius, boxSizing, fontFamily } from "@mui/system";
 import Rectangle20 from "../images/Rectangle 20.png";
 import React from "react";
 import Upcoming from "../images/Discover Lifelong 1 (1).png";
+import Storytime from "../images/Story Time (1).png";
 import Template1 from "./Template1";
 import Rectangle24 from "../images/Rectangle 24.png";
 import useViewport from "../viewport";
@@ -64,7 +65,115 @@ const Card2 = () => {
           }}
         ></div>
         </Typography>
-        
+        <Paper
+          style={{
+            display: "flex",
+            justifyContent: "row",
+            // position: "absolute",
+            width: "95%",
+            height: "12%",
+            background: " #FFFFFF",
+            border: "1.5px solid #FAFAFA",
+            boxSizing: "border-box",
+            borderRadius: 21,
+            marginBottom:"4%",
+            marginLeft:"1%"
+          }}
+        >
+          <img
+            src={Rectangle20}
+            alt="Rectangle20"
+            style={{
+              height: "7rem",
+              width: "8rem",
+              borderRadius: 13,
+              marginTop: "1%",
+              marginLeft: "1%",
+              paddingBottom:"1%"
+            }}
+          />
+          <Typography
+            style={{
+              position: "absolute",
+              width: "30%",
+              height: "20%",
+              fontFamily: "Poppins",
+              fontWeight: 500,
+              fontSize: 19.8,
+              color: "#333333",
+              marginLeft: "13%",
+              marginTop: 8,
+            }}
+          >
+            Lorem ipsum sit amet
+          </Typography>
+          <div
+            style={{
+              position: "absolute",
+              width: "9%",
+              height: "3%",
+              background:
+                "linear-gradient(102.21deg, #FFAE0F 3.69%, #FD2CF5 102.03%)",
+              boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.14)",
+              borderRadius: 10,
+              marginLeft: "35%",
+              marginTop: "1%",
+            }}
+          >
+            <img
+              src={Storytime}
+              alt="clock"
+              style={{ width: 18, height: 18, marginLeft: 1, marginTop: 1 }}
+            />
+            <div style={{position: "absolute",
+              width: "80%",
+              height: "3%",
+              fontFamily: "Poppins",
+              fontWeight: "bold",
+              fontSize: 12.9,
+              color: "white",
+              marginTop: "-20%",
+              marginLeft: "17%",}}>4:00-6:00 PM</div>
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              width: "27%",
+              height: "20%",
+              fontFamily: "Poppins",
+              fontWeight: "normal",
+              fontSize: 10.9,
+              color: "#666666",
+              marginTop: "3%",
+              marginLeft: "13%",
+            }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque, mi
+            vitae vitae volutpat urna, nulla. Sit suspendisse diam mauris
+            hendrerit viverra diam feugiat mauris. Nec sed malesuada nulla
+            pharetra hash.
+          </div>
+          <button
+            style={{
+              position: "absolute",
+              width: "7%",
+              height: "4%",
+              background:'rgba(41, 165, 255, 1)',
+              borderRadius: 5,
+              marginLeft: "36%",
+              marginTop: "7.5%",
+              textAlign: "center",
+              color: "white",
+              fontWeight: 600,
+              fontFamily:"Poppins",
+              fontSize: 14,
+              border:"none",
+              cursor:"pointer"
+            }}
+          >
+            Join Now
+          </button>
+        </Paper>
         <div
           style={{
             display: "flex",
@@ -72,8 +181,8 @@ const Card2 = () => {
             justifyContent: "space-between",
           }}
         >
-          <Template1 Img={Rectangle20} Time="4:00-6:00 PM" Colur={'Nancy'} />
-          <Template1 Img={Rectangle24} Time="8:00-9:00 PM" Colur={"#29A5FF"} />
+          {/* <Template1 Img={Rectangle20} Time="4:00-6:00 PM" Colur={1} /> */}
+          <Template1 Img={Rectangle24} Time="8:00-9:00 PM" />
           <Typography
           style={{
             width: 53,
@@ -100,10 +209,10 @@ const Card2 = () => {
           }}
         ></div>
         </Typography>
-          <Template1 Img={Rectangle20} Time="4:00-6:00 PM" Colur="1" />
-          <Template1 Img={Rectangle24} Time="8:00-9:00 PM" Colur={2} />
-          <Template1 Img={Rectangle20} Time="4:00-6:00 PM" Colur={2} />
-          <Template1 Img={Rectangle24} Time="8:00-9:00 PM" Colur={2} />
+          <Template1 Img={Rectangle20} Time="4:00-6:00 PM" />
+          <Template1 Img={Rectangle24} Time="8:00-9:00 PM" />
+          <Template1 Img={Rectangle20} Time="4:00-6:00 PM" />
+          <Template1 Img={Rectangle24} Time="8:00-9:00 PM" />
         </div>
       </Paper>
     </div>

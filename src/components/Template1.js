@@ -5,7 +5,7 @@ import React from 'react'
 import Storytime from "../images/Story Time (1).png";
 // import Rectangle20 from "../images/Rectangle 20.png";
 // import Storytime from "../images/Story Time (1).png";
-const Template1 = ({Img,Time,Colur}) => {
+const Template1 = ({Img,Time}) => {
     return (
         <Paper
           style={{
@@ -100,7 +100,8 @@ const Template1 = ({Img,Time,Colur}) => {
               position: "absolute",
               width: "7%",
               height: "4%",
-              background: {Colur}==="Nancy" ? '#000000':'#29A5FF',
+              background:'rgba(41, 165, 255, 1)',
+              opacity:0.3,
               borderRadius: 5,
               marginLeft: "36%",
               marginTop: "7.5%",
@@ -110,7 +111,7 @@ const Template1 = ({Img,Time,Colur}) => {
               fontFamily:"Poppins",
               fontSize: 14,
               border:"none",
-              cursor:"pointer"
+              cursor:"not-allowed"
             }}
           >
             Join Now
