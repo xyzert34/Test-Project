@@ -12,9 +12,10 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import LoremIpsum from "../images/Lorem IPSUM.png";
+import PageviewRoundedIcon from '@mui/icons-material/PageviewRounded';
 import Rectangle35 from "../images/Rectangle 35.png";
-import SearchIcon from '@mui/icons-material/Search';
-const pages = ["About Us", "Contact Us", "Courses","Mentors"];
+import SearchIcon from "@mui/icons-material/Search";
+const pages = ["About Us", "Contact Us", "Courses", "Mentors"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = () => {
@@ -50,10 +51,9 @@ const ResponsiveAppBar = () => {
               display: "flex",
               color: "black",
               height: 40,
-              width: 118,
-              left: 113,
-              top: 15,
-              
+              width: 78,
+              marginLeft: 100,
+              marginRight: 150,
             }}
           />
 
@@ -69,6 +69,7 @@ const ResponsiveAppBar = () => {
               <MenuIcon />
             </IconButton>
             <Menu
+            
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -112,17 +113,45 @@ const ResponsiveAppBar = () => {
               </Button>
             ))}
           </Box>
-
-            <Box>
-                <input type={Text} style={{backgroundColor: "#FBB03B",color:'white',borderRadius:20,border:0,height:25,width:200}}
-                placeholder="Search"
-                />
-            </Box>
-
+          <Box>
+          {/* <div
+              style={{
+                width: 15.13,
+                height: 15.21,
+                border: "2px solid #000000",
+                borderRadius: 15,
+                marginLeft: 260,
+                // marginTop: 10,
+                marginBottom:-30
+              }}
+            ></div>
+            <div
+              style={{ width: 0, height: 2.69, border: "2px solid #000" }}
+            ></div> */}
+            <input
+              type={Text}
+              style={{
+                paddingLeft: 12,
+                backgroundColor: "#FBB03B",
+                color: "white",
+                borderRadius: 20,
+                border: 0,
+                height: "1.4rem",
+                width: '18rem',
+              }}
+              placeholder="Search"
+            />
+            <SearchIcon fontSize="large" style={{marginLeft:"-9%",marginBottom:"-5%",color:"white" }}/>
+            
+          </Box>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <IconButton
+                style={{ marginRight: 80, marginLeft: 20 }}
+                onClick={handleOpenUserMenu}
+                sx={{ p: 0 }}
+              >
                 <Avatar alt="Remy Sharp" src={Rectangle35} />
               </IconButton>
             </Tooltip>

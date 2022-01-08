@@ -9,30 +9,41 @@ import Image1 from './components/Image1';
 import Image3 from './components/Image3';
 import Image2 from './components/Image2';
 import Image4 from './components/Image4';
+import ViewportProvider from './viewport/ViewportProvider';
+import useViewport from './viewport';
 
 function App() {
+  const {width,height,isMobile,isTablet} =useViewport();
   return (
+    <>
+    <ViewportProvider>
     <div className="App1">
       <ResponsiveAppBar/>
-      <Image3/>
-      <Image1/>
-      <Image2/>
+        <Image3/>
+        <Image1/>
+        <Image2/>
       {/* <div> */}
       <div style={{display:"flex",
-          marginLeft: 85,}}>
-      <div>
+          marginLeft: 85,flexDirection: isMobile ? "column" : isTablet ? "column":"row"}}>
+      <div style={{
+        display:'flex',flexDirection:"column",}}>
       <Card1/>
       <Card2/>
       </div>
-      <div>
+      <div style={{
+        display:'flex',flexDirection:"column",
+        marginRight:"15%",}}>
       <Card3/>
       <Card4/>
       <Image4/>
       </div>
       </div>
+      
       <Footer/>
-      {/* </div> */}
     </div>
+      {/* </div> */}
+    </ViewportProvider>
+    </>
   );
 }
 

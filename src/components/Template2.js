@@ -1,42 +1,41 @@
 import React from "react";
 import StarIcon from "@mui/icons-material/Star";
 import {Typography } from "@mui/material";
-
+import useViewport from '../viewport'
 const Template2 = ({ Img }) => {
+  const {width,height,isMobile,isTablet}=useViewport();
   return (
     <div>
       <div
         style={{
           display: "flex",
           justifyContent: "row",
-          width: 397,
-          height: 128,
           marginBottom: 16,
-          marginLeft: 8,
+          marginLeft: "2%",
         }}
       >
         <img
           src={Img}
           alt="Rectangle20"
           style={{
-            height: 109.14,
-            width: 194.02,
+            height: "40%",
+            width: "45%",
             borderRadius: 2,
-            marginTop: 8,
-            marginLeft: 8,
+            marginTop: "2%",
+            marginLeft: "2%",
           }}
         />
         <div style={{display:'flex',flexDirection:"column"}}>
         <Typography
           style={{
-            width: 166,
-            height: 28,
+            width: "90%",
+            height: "20%",
             fontFamily: "Poppins",
             fontWeight: 500,
-            fontSize: 17.8,
+            fontSize: "100%",
             color: "#333333",
-            marginLeft: 10,
-            marginTop: 8,
+            marginLeft: "4%",
+            marginTop: "3%",
           }}
         >
           Lorem ipsum sit a
@@ -44,20 +43,20 @@ const Template2 = ({ Img }) => {
 
         <div
           style={{
-            width: 171,
-            height: 33,
+            width: "70%",
+            height: "25%",
             fontFamily: "Poppins",
             fontWeight: 400,
-            fontSize: 9.9,
+            fontSize: "60%",
             color: "#666666",
-            marginTop: 3,
-            marginLeft: 10,
+            marginTop: "2%",
+            marginLeft: "5%",
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor
           sit amet,
         </div>
-        <div style={{display:"flex",flexDirection:"row",marginLeft:10.1,marginTop:18,color: "rgba(252, 238, 33, 1)",width:70,justifyContent:"space-between"}}>
+        <div style={{display:"flex",flexDirection:"row",marginLeft:"4%",marginTop: isTablet?"11%":"8%",color: "rgba(252, 238, 33, 1)",width:"40%",justifyContent:"space-between"}}>
           <StarIcon
             style={{
               width: 15,

@@ -1,16 +1,17 @@
 import { Button, Paper, Typography } from "@mui/material";
 import React from "react";
 import Person from "../images/image 2.png";
+import useViewport from "../viewport";
 const Card3 = () => {
+  const{width,height,isMobile,isTablet}=useViewport();
   return (
-    <div>
       <Paper
         elevation={3}
         style={{
-          width: 397,
-          height: 170,
-          marginLeft: 19,
-          marginTop: -328.32,
+          width: isMobile? "80%": isTablet?"90%":"120%",
+          height: isMobile?"30%": isTablet?"30%":"18%",
+          // marginLeft: ".5%",
+          marginTop: isTablet?'20px':'-95%',
           boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.06)",
           display: "flex",
           background:
@@ -20,20 +21,20 @@ const Card3 = () => {
         <img
           src={Person}
           alt="personimages"
-          style={{ width: 85, height: 85, marginTop: 28, marginLeft: 29 }}
+          style={{ width: "30%", height: "50%", marginTop: "7%", marginLeft: "8%" }}
         />
         <div>
           
         <h3 style={{color:"white",fontWeight:600,
-            fontFamily: "Poppins",marginLeft:65,marginTop:25}}>Any Any Doubts?</h3>
+            fontFamily: "Poppins",marginLeft:"16%",marginTop:"8%"}}>Any Any Doubts?</h3>
           <ul style={{
           display:"flex",
           flexDirection:"column",
-            width: 164,
-            marginLeft:45,
-            marginTop:-15,
+            width: "60%",
+            marginLeft:"5%",
+            marginTop:"-5%",
             fontWeight:300,
-            height: 63,
+            height: "40%",
             color: "white",
             justifyContent:"space-between",
             fontSize:12,
@@ -47,19 +48,18 @@ const Card3 = () => {
             variant="outlined"
             size="small"
             style={{
-              width: "377px",
-              height: 30,
+              width: "150%",
+              height: "20%",
               borderColor: "white",
               color: "white",
               fontWeight: "500",
               border: "1px solid",
-              marginLeft: -105,
+              marginLeft: "-55%",
             }}
           >BOOK YOUR FREE MENTORSHIP SESSION NOW!
           </Button>
           </div>
       </Paper>
-    </div>
   );
 };
 

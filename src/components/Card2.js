@@ -5,14 +5,16 @@ import React from "react";
 import Upcoming from "../images/Discover Lifelong 1 (1).png";
 import Template1 from "./Template1";
 import Rectangle24 from "../images/Rectangle 24.png";
+import useViewport from "../viewport";
 const Card2 = () => {
+  const {width,height,isMobile,isTablet} =useViewport();
   return (
     <div>
       <Paper
         elevation={3}
         style={{
-          width: 655,
-          height: 1032,
+          width: isMobile? "100%": isTablet?"100%":"92%",
+          height: isMobile?"100%": isTablet?"30%":"98%",
           marginTop: 19,
           boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.06)",
           // display: "flex",
@@ -20,19 +22,19 @@ const Card2 = () => {
         }}
       >
         <img
-          style={{ height: 32, width: 32, marginTop: 18, marginLeft: 8 }}
+          style={{ height: "2%", width: "4%", marginTop: "2%", marginLeft: "1%" }}
           src={Upcoming}
           alt="Upcoming"
         />
 
         <Typography
-          variant="h3"
+          variant="h4"
           style={{
             fontWeight: 600,
-            marginLeft: 46,
-            marginTop: -42,
-            marginBottom: 14,
-            fontSize: 35,
+            marginLeft: "6%",
+            marginTop: "-5.5%",
+            marginBottom: "3%",
+            fontSize: "200%",
           }}
         >
           Upcoming Classes
@@ -50,9 +52,10 @@ const Card2 = () => {
             marginBottom:13,
           }}
         >
-          Today<div
+          Today
+          <div
           style={{
-            width: 579,
+            width: "1190%",
             // height: 0,
             opacity: 0.4,
             border: "1px solid #000000",
@@ -69,7 +72,7 @@ const Card2 = () => {
             justifyContent: "space-between",
           }}
         >
-          <Template1 Img={Rectangle20} Time="4:00-6:00 PM" Colur={100} />
+          <Template1 Img={Rectangle20} Time="4:00-6:00 PM" Colur={'Nancy'} />
           <Template1 Img={Rectangle24} Time="8:00-9:00 PM" Colur={"#29A5FF"} />
           <Typography
           style={{
@@ -87,7 +90,7 @@ const Card2 = () => {
         >
           16/09/21<div
           style={{
-            width: 569,
+            width: '900%',
             // height: 0,
             opacity: 0.4,
             border: "1px solid rgba(0, 0, 0, 1)",
